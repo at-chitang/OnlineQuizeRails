@@ -1,5 +1,4 @@
 class Api::V1::UsersController < ApplicationController
-
   # GET /users
   def index
     render json: UserOperations::Index.new(params).call
@@ -25,5 +24,4 @@ class Api::V1::UsersController < ApplicationController
   def destroy
     render json: UserOperations::Destroy.new(params).call
   end
-
 end

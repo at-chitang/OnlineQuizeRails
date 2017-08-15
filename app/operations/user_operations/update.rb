@@ -12,7 +12,8 @@ class UserOperations::Update < ApplicationOperation
   def call
     form = UserContracts::Update.new(
       email: email,
-      password: password)
+      password: password
+    )
     form.valid!
     update_user!
     user

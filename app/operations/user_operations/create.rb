@@ -11,7 +11,8 @@ class UserOperations::Create < ApplicationOperation
   def call
     form = UserContracts::Create.new(
       email: email,
-      password: password)
+      password: password
+    )
     form.valid!
     create_user!
   end

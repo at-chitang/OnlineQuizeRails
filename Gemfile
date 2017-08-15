@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
@@ -50,15 +49,15 @@ gem 'active_model_serializers'
 # A plugin for versioning Rails based RESTful APIs.
 gem 'versionist', '1.5.0'
 # ActiveRecord plugin allowing you to hide and restore records without actually deleting them.
-gem "paranoia", "~> 2.2"
+gem 'paranoia', '~> 2.2'
 
 gem 'activeadmin', '1.0.0'
 gem 'devise', '4.3.0'
-gem "slim-rails", '3.1.2'
-gem "slim", '3.0.8'
+gem 'slim-rails', '3.1.2'
+gem 'slim', '3.0.8'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
@@ -68,6 +67,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   # A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker'
+  gem 'rubocop'
 end
 
 group :development do
@@ -83,8 +83,8 @@ end
 
 group :development, :stating do
   # Advanced seed data handling for Rails, combining the best practices of several methods together.
-  gem "seed-fu", "2.3.6"
-
+  gem 'seed-fu', '2.3.6'
 end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
