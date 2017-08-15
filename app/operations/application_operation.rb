@@ -5,5 +5,5 @@ class ApplicationOperation
     @params = params
   end
 
-  def call;end
+  def call; end
 end

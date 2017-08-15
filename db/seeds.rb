@@ -5,4 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-AdminUser.create!(email: 'admin@example.com', password: '123456', password_confirmation: '123456')
+# AdminUser.create!(email: 'admin@example.com', password: '123456', password_confirmation: '123456')
+print "Users:    "
+50.times do |i|
+  email= Faker::Internet.unique.email
+  @user= User.new(
+    user_name: Faker::Internet.user_name,
+    password: '123456',
+    email: email,
+    # name: Faker::Name.name,
+    # provider: 'email',
+    # gender: rand(0..2),
+    # birthday: Faker::Date.birthday(18, 65),
+    # uid: email,
+    # avatar: "#{i+1}.png"
+    )
+  if @user.save
+    print '.'
+  end
+end
+puts 'Done'

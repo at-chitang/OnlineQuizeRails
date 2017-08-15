@@ -55,6 +55,7 @@ gem 'activeadmin', '1.0.0'
 gem 'devise', '4.3.0'
 gem 'slim-rails', '3.1.2'
 gem 'slim', '3.0.8'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -68,6 +69,7 @@ group :development, :test do
   # A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker'
   gem 'rubocop'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -79,6 +81,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Annotate Rails classes with schema and routes info
   gem 'annotate', '2.7.2'
+  gem 'tabs2spaces'
 end
 
 group :development, :stating do
